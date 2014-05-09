@@ -1,4 +1,7 @@
 name: universeroc
+description: universeroc's page
+url: http://universeroc.github.io
+
 markdown: redcarpet
 markdown_ext:  markdown,mkdown,mkdn,mkd,md
 textile_ext:   textile
@@ -15,7 +18,7 @@ show_drafts: nil
 limit_posts: 0
 highlighter: pygments
 
-relative_permalinks: true
+relative_permalinks: true 
 
 permalink:     date
 paginate_path: 'page:num'
