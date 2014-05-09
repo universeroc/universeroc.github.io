@@ -5,7 +5,7 @@ title: universeroc's page
 
 <dl class="dl-horizontal">
 {% for post in site.posts %}
-  <dt><span>{{ post.date | date_to_string }} &raquo; </dt>
+  <dt><span>{{ post.date | date: "%d-%m-%y" }} &raquo;</dt>
   <dd><a href="{{ post.url }}">{{ post.title }}</a></dd>
 {% endfor %}
 </dl>
