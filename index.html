@@ -3,9 +3,8 @@ layout: default
 title: universeroc's page
 ---
 
-<dl class="dl-horizontal">
+<ul class="dl-horizontal">
 {% for post in site.posts %}
-  <dt><span>{{ post.date | date: "%d-%m-%y" }} &raquo;</dt>
-  <dd><a href="{{ post.url }}">{{ post.title }}</a></dd>
+  <li><a href="{{ post.url }}">{{ post.title }}</a></li>
 {% endfor %}
-</dl>
+</ul>

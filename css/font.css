@@ -1,4 +1,4 @@
-body, h1, h2, h3, h4, h5, h6, span, p, a {
+body, span, p, a {
 	font-family: "Georgia";
 	font-size: 1.5em;
 }
