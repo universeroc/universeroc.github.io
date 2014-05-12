@@ -5,7 +5,7 @@ date: 2014-05-12T13:05:25+08:00
 ---
 
 Today is monday, 12 May 2014. Another regular day to everyone.
-After lunch we have about two hours to have a rest, recently I pick up english study again but the moment I don't have any passion to continue <<Friends>> season 1 which I watched only one episode last week.
+After lunch we have about two hours to have a rest, recently I pick up english study again but the moment I don't have any passion to continue &lt;&lt;Friends&gt;&gt; season 1 which I watched only one episode last week.
 
 From laoluo experience, passion is not a thing that could last long time only about two or three days. To keep it, once or twice a week to listen a speech or present with passion.
 
@@ -26,7 +26,7 @@ He went to school and got to know he could not use computer as everyonce else. S
 Information industry has a rapid pace. In it everybody becomes impetuous easily. Follow your heart and remember what's you want. Kai-Fu Lee told us Job's motto "Stay hungry stay foolish".
 
 When you trapped in some problem, thinking about death will help you out. Death is fair to anybody.
-It reminds me that death is the port of life mama said to Forrest in <<Forrest Gump>> I watched yesterday.
+It reminds me that death is the port of life mama said to Forrest in &lt;&lt;Forrest Gump&gt;&gt; I watched yesterday.
 
 Time is life. Follow your heart and seek what you're insterested at.
 
