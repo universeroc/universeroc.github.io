@@ -1,0 +1,13 @@
+---
+layout: post
+title: "GNOME.Asia 2014"
+date: 2014-05-15T09:37:57+08:00
+---
+
+Several days ago, I had been watching a video[link](http://www.csdn.net/article/a/2014-04-25/15818584) from CSDN.com about GNOME.Asia. My friend leo sent me a link [GNOME.Asia](http://code.csdn.net/news/2819735). I registered it as quickly as I could.
+
+Show you my ticket:
+
+<img src="/images/latex/GNOME.Asia.png"></img>
+
+Later I'll add more details after next weekend. :)
