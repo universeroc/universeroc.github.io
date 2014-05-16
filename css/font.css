@@ -1,4 +1,5 @@
 body, span, p, a {
-	font-family: "Georgia";
-	font-size: 1.5em;
+	font-family: Georgia,Cambria,"Times New Roman",Times,serif;
+	font-size: 17px;
+	font-height: 28px;
 }
