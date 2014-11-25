@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blowup a simple HTML5 canvas zoom javascript lib</title>
+  </head>
+  <body>
+    <center>
+      <div><img id='blowup' src='wangzulan.png' /></div>
+    </center>
+  </body>
+  <script type="text/javascript" src='repeat.js'></script>
+  <script type="text/javascript" src='blowup.js'></script>
+  <script type="text/javascript">
+    var params = {};
+    if (location.search) {
+        var parts = location.search.substring(1).split('&');
+
+        for (var i = 0; i < parts.length; i++) {
+            var nv = parts[i].split('=');
+            if (!nv[0]) continue;
+            params[nv[0]] = nv[1] || true;
+        }
+    }
+
+    Blowup.setup(params.x, params.y);
+  </script>
+</html>
