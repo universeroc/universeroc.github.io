@@ -256,7 +256,7 @@ function update() {
 function start() {
     canvas.ontouchstart =
     canvas.onmousedown = function (e) {
-        mouse.button = e.which;
+        mouse.button = (e.which == undefined ? 1 : e.which);
         mouse.px = mouse.x;
         mouse.py = mouse.y;
         var rect = canvas.getBoundingClientRect();
