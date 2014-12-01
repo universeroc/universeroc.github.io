@@ -254,7 +254,7 @@ function update() {
 }
 
 function start() {
-
+    canvas.ontouchstart =
     canvas.onmousedown = function (e) {
         mouse.button = e.which;
         mouse.px = mouse.x;
@@ -265,12 +265,12 @@ function start() {
         mouse.down = true;
         e.preventDefault();
     };
-
+    canvas.ontouchend =
     canvas.onmouseup = function (e) {
         mouse.down = false;
         e.preventDefault();
     };
-
+    canvas.ontouchmove =
     canvas.onmousemove = function (e) {
         mouse.px = mouse.x;
         mouse.py = mouse.y;
