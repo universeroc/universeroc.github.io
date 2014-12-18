@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Time's Colour</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <center id='time'></center>
+    <script type="text/javascript">
+    var time = document.getElementById('time');
+    time.style.width = screen.availWidth;
+    time.style.height = screen.availHeight;
+    time.style.lineHeight = screen.availHeight / 100;
+
+    function refresh() {
+      var date = new Date();
+      // var YY = date.getYear();
+      // var MM = date.getMonth();
+      // var DD = date.getDate();
+
+      var hh = date.getHours().toString().length > 1 ? date.getHours() : '0' + date.getHours();
+      var mm = date.getMinutes().toString().length > 1 ? date.getMinutes() : '0' + date.getMinutes();
+      var ss = date.getSeconds().toString().length > 1 ? date.getSeconds() : '0' + date.getSeconds();
+      var f = hh + ' : ' + mm + ' : ' + ss;
+      var color = '#' + hh + mm + ss;
+      time.innerHTML = '<div class="time">' + f + '</div>' +
+                       '<div class="colour">' + color + '</div>';
+      time.style.background = color;
+    }
+    setInterval(refresh, 1000);
+    </script>
+  </body>
+</html>
+
