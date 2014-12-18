@@ -1,16 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html style='height:100%;'>
   <head>
     <title>Time's Colour</title>
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
-  <body>
-    <center id='time'></center>
+  <body style='height:100%;'>
+    <center id='time' style='height:100%; line-height:280px;'></center>
     <script type="text/javascript">
     var time = document.getElementById('time');
-    time.style.width = screen.availWidth;
-    time.style.height = screen.availHeight;
-    time.style.lineHeight = screen.availHeight / 100;
 
     function refresh() {
       var date = new Date();
