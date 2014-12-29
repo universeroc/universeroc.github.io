@@ -1,11 +1,17 @@
 <!DOCTYPE html>
-<html style='height:100%;'>
+<html>
   <head>
     <title>Time's Colour</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
   </head>
-  <body style='height:100%;'>
-    <center id='time' style='height:100%; line-height:280px;'></center>
+  <body>
+    <div id='time'>
+      <div class='cell'>
+        <h1 class='time'></h1>
+        <div class='colour'></div>
+      </div>
+    </div>
     <script type="text/javascript">
     var time = document.getElementById('time');
 
@@ -20,8 +26,9 @@
       var ss = date.getSeconds().toString().length > 1 ? date.getSeconds() : '0' + date.getSeconds();
       var f = hh + ' : ' + mm + ' : ' + ss;
       var color = '#' + hh + mm + ss;
-      time.innerHTML = '<div class="time">' + f + '</div>' +
-                       '<div class="colour">' + color + '</div>';
+      time.innerHTML = '<div class="cell">' +
+                       '<h1 class="time">' + f + '</h1>' +
+                       '<div class="colour">' + color + '</div></div>';
       time.style.background = color;
     }
     setInterval(refresh, 1000);
