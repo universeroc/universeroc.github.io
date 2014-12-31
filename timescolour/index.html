@@ -7,10 +7,13 @@
   </head>
   <body>
     <div id='time'>
-      <div class='cell'>
-        <h1 class='time'></h1>
-        <div class='colour'></div>
-      </div>
+      <p class='cell'>
+        <span class='time'></span>
+        <span class='time'></span>
+        <span class='time'></span>
+
+        <b class='colour'></b>
+      </p>
     </div>
     <script type="text/javascript">
     var time = document.getElementById('time');
@@ -26,9 +29,13 @@
       var ss = date.getSeconds().toString().length > 1 ? date.getSeconds() : '0' + date.getSeconds();
       var f = hh + ' : ' + mm + ' : ' + ss;
       var color = '#' + hh + mm + ss;
-      time.innerHTML = '<div class="cell">' +
-                       '<h1 class="time">' + f + '</h1>' +
-                       '<div class="colour">' + color + '</div></div>';
+      time.innerHTML = '<p class="cell">' +
+                       '<span class="time" data-text="' + hh + '">' + hh + '</span>' +
+                       '<span class="time" data-text=":">:</span>' +
+                       '<span class="time"  data-text="' + mm + '">' + mm + '</span>' +
+                       '<span class="time" data-text=":">:</span>' +
+                       '<span class="time" data-text="' + ss + '">' + ss + '</span>' +
+                       '<br /><span class="colour">' + color + '</span></p>';
       time.style.background = color;
     }
     setInterval(refresh, 1000);
