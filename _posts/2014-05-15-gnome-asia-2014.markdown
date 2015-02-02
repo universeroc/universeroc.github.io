@@ -8,6 +8,6 @@ Several days ago, I had been watching a video[link](http://www.csdn.net/article/
 
 Show you my ticket:
 
-<img src="/images/latex/GNOME.Asia.png"></img>
+<img src="/assets/media/GNOME.Asia.png"></img>
 
 Later I'll add more details after next weekend. :)

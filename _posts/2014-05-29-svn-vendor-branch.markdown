@@ -19,7 +19,7 @@ Svn supports a feature named "vendor branch" which satisfy me.
 
 It's a little confusing, now I'd like to give a more clear concept.
 
-<img src="/images/latex/svn-vendor-branch-how-to-use.png" alt="svn-vendor-branch-how-to-use" />
+<img src="/assets/media/svn-vendor-branch-how-to-use.png" alt="svn-vendor-branch-how-to-use" />
 
 1. create a repository empty.
 2. create a <b>current</b> directory in branches.

@@ -1,30 +1,21 @@
 ---
-layout : nil
+layout: null
 ---
-
 <?xml version="1.0" encoding="UTF-8"?>
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
-<channel>
-<title>{{site.name |append:' ' xml_escape}}</title>
-<image>
-    <link>http://universeroc.github.io</link>
-    <url>http://universeroc.github.io/avatar.png</url>
-</image>
-<link>http://universeroc.github.io</link>
-<description/>
-<language>en</language>
-<generator>http://universeroc.github.io</generator>
-<ttl>5</ttl>
-<copyright><![CDATA[Copyright &copy; universeroc.github.io]]></copyright>
-{% for post in site.posts limit: 20 %}
-     <item>
-         <title>{{ post.title | append:' ' xml_escape }}</title>
-         <link>{{ site.url }}{{ post.url }}</link>
-         <guid>{{ site.url }}{{ post.id }}</guid>
-         <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-         <author><![CDATA[universeroc]]></author>
-         <description><![CDATA[{{ post.content | expand_urls: site.url }}]]></description>
-     </item>
-{% endfor %}
-</channel>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>{{ site.title }}</title>
+		<description>{{ site.description }}</description>
+		<link>{{ site.BASE_PATH }}/</link>
+		<atom:link href="{{ site.BASE_PATH }}/{{ site.rss_path }}" rel="self" type="application/rss+xml" />
+		{% for post in site.posts limit:10 %}
+			<item>
+				<title>{{ post.title }}</title>
+				<description>{{ post.content | xml_escape }}</description>
+				<pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
+				<link>{{ site.BASE_PATH }}{{ post.url }}</link>
+				<guid isPermaLink="true">{{ site.BASE_PATH }}{{ post.url }}</guid>
+			</item>
+		{% endfor %}
+	</channel>
 </rss>

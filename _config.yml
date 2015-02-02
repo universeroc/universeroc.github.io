@@ -1,58 +1,32 @@
-name: universeroc
-description: universeroc's page
-url: http://universeroc.github.io
+# visit https://github.com/mojombo/jekyll/wiki/Configuration for more settings
 
-markdown: redcarpet
-markdown_ext:  markdown,mkdown,mkdn,mkd,md
-textile_ext:   textile
-
-excerpt_separator: "\n\n"
-
-pygments: true
-
-timezone: TIMEZONE
-
-destination: ./_site
-future:      true
-show_drafts: nil
-limit_posts: 0
+paginate: 10 # pagination based on number of posts
+paginate_path: "page:num"
+exclude: ["README.md"] # files to exclude
 highlighter: pygments
+markdown: kramdown
 
-relative_permalinks: true 
+defaults:
+  -
+    scope:
+      path: "" # empty string for all files
+    values:
+      title: "You will never know what you can do till you try"
 
-permalink:     date
-paginate_path: 'page:num'
-paginate:      1
+description: "universeroc"
+author:
+  name: "universeroc"
+  email: universeroc@gmail.com
+  github: universeroc
+  twitter: "#"
+  pinterest: universeroc
+  linkedin: universeroc
+  bio: You will never know what you can do till you try
+  avatar: assets/media/avatar.png
+  avatar35: assets/media/avatar35.png
 
-maruku:
-  use_tex:    false
-  use_divs:   false
-  png_engine: blahtex
-  png_dir:    images/latex
-  png_url:    /images/latex
-  fenced_code_blocks: true
+rss_path: feed.xml
+categories_path: categories.html
+tags_path: tags.html
 
-rdiscount:
-  extensions: []
-
-redcarpet:
-  extensions: []
-
-kramdown:
-  auto_ids: true
-  footnote_nr: 1
-  entity_output: as_char
-  toc_levels: 1..6
-  smart_quotes: lsquo,rsquo,ldquo,rdquo
-  use_coderay: false
-
-  coderay:
-    coderay_wrap: div
-    coderay_line_numbers: inline
-    coderay_line_numbers_start: 1
-    coderay_tab_width: 4
-    coderay_bold_every: 10
-    coderay_css: style
-
-redcloth:
-  hard_breaks: true
+BASE_PATH:
