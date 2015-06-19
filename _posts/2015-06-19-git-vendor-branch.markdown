@@ -45,10 +45,10 @@ then:
 
 And then my workmate found another way to make it:
 
-    **git cherry-pick [vendor-branch-new-commit]**
+    git cherry-pick [vendor-branch-new-commit]
 
 It's easier and simpler way than
 
-    **git pull --rebase [vendor-branch]**
+    git pull --rebase [vendor-branch]
 
 Hope this essay help you avoid extra work.
