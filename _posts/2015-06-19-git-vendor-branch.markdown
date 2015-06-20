@@ -2,6 +2,9 @@
 layout: post
 title: git vendor branch
 date: 2015-06-19T11:52:33+08:00
+thumb: http://git-scm.com/images/logo@2x.png
+category: git
+tags: git vendor branch cherry-pick
 ---
 **git is the most important tool as English to software developers.**
 

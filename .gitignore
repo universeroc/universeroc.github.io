@@ -1,2 +1,4 @@
 _site
-*.db
+.sass-cache
+
+bower_components/
