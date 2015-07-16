@@ -15,3 +15,7 @@ date: 2015-07-16T15:27:34+08:00
 [Introduction of MVVM](http://objccn.io/issue-13-1/)
 
 [BDD](http://objccn.io/issue-15-1/)
+
+[MVVM from Microsoft](https://msdn.microsoft.com/en-us/library/hh848246.aspx)
+
+[An open source project talking about MVVM](https://github.com/AshFurrow/C-41)
