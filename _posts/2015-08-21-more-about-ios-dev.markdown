@@ -9,3 +9,5 @@ date: 2015-08-21T10:01:01+08:00
 [Introduction to Using Static Libraries in iOS](https://developer.apple.com/library/ios/technotes/iOSStaticLibraries/Introduction.html#//apple_ref/doc/uid/TP40012554)
 
 [detecting-the-call-events-in-ios](http://stackoverflow.com/questions/18310332/detecting-the-call-events-in-ios)
+
+[Lock Unlock events iphone](http://stackoverflow.com/questions/706344/lock-unlock-events-iphone)
