@@ -1,0 +1,21 @@
+---
+title: one thing
+date: 2017-01-10T09:32:31+08:00
+layout: post
+---
+
+Happy new year 2017!
+
+Last night, on bed, before sleep, I read my blog old posts, and found that it's been so much time to go.
+
+The first post is 2014-05-08. Now it's been more than two years.
+
+An idea in my mind is to make an application by myself according to my mind. Until now I don't make it. :(
+
+The same as writing blog, doing one thing for a long time, you gain a lot. Even it's a small picec of cake, it costs lots of extra time to finish it. There are many stories to say, for example, as I know, Linux, the famous world wide known OS, Notepad++, a text editor, AdBlock, also developed in extra time, f.lux, a software work cross-platform to controll screen to adjust blue light to protect your eyes, etc.
+
+When you look their websites, you'll find all of them started at enough early time, and last a long time also. So what you should figure out is time make the good result, you can't build roma in one day.
+
+Find one interested thing or feature, make it, and improve it. Try to focus on one thing, and do it, one day, maybe it helps you in some way.
+
+I'm doing one since this post.
