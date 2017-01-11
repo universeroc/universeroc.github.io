@@ -10,7 +10,7 @@ tags: git vendor branch cherry-pick
 
 **[github](http://github.com)** help us to get familiar with git.
 
-When your development dependents on third_party project, you need [vendor branch](http://yupengzhang.com/2014/05/29/svn-vendor-branch.html) management.
+When your development dependents on third_party project, you need [vendor branch](2014-05-29-svn-vendor-branch.markdown) management.
 
 Here I don't talk about vendor branch too much but how to make branch *clean and clear*.
 

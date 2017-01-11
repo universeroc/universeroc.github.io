@@ -6,7 +6,7 @@ date: 2014-12-16T09:24:41+08:00
 
 [Oral English Video](http://v.youku.com/v_show/id_XNzMwNDg4Njg0.html)
 
-As old essay said: [Success Takes Years](http://universeroc.github.io/2014/10/14/success-takes-years.html)
+As old essay said: [Success Takes Years](2014-10-14-success-takes-years.markdown)
 
 So before you achive success, what you should do, is that keep doing what you are aiming for.
 
