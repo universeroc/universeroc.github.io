@@ -10,22 +10,7 @@ layout: post
 
 代码大概逻辑是在一个页面遍历 div，找到目标 div 后，重新创建一个 div，并且删除目标 div，代码巨简单，但是却会把浏览器卡死，一直运行不完。无语写了一个简单的例子测了一把，还真发现了确实这个 API 调用后有这个问题，代码如下：
 
-<code>
-<!DOCTYPE html>
-<html>
-<head>
-  <title></title>
-</head>
-<body>
-<div></div>
-<div></div>
-<div></div>
-<div></div>
-<div></div>
-<div></div>
-
-
-<script type="text/javascript">
+```
   var divs=document.getElementsByTagName('div');
   alert(divs.length + ' 11111111111111111111111');
   for (var i = 0; i < divs.length; ++i) {
@@ -37,10 +22,7 @@ layout: post
       alert(divs.length + ' 00000000000000000000000000000');
     }
   }
-</script>
-</body>
-</html>
-</code>
+```
 
 注意里面必须用 alert 卡住，如果你改为 console.log， 那么你就等着卡死吧，没有 log 输出，更无法打开 devtools 窗口。
 
@@ -48,8 +30,8 @@ layout: post
 根据运行结果来看，每次 length 都会变化，变成了一个死循环无法跳出。
 
 改为 querySelectorAll 之后，一切安好。跟同事沟通了一下这个事情，将 i < divs.length 改了下
-<code>
-  var l = divs.length; for (var i = 0; i < l; ++i) {}
-</code>
+```
+var l = divs.length; for (var i = 0; i < l; ++i) {}
+```
 
 这样也可以规避掉这个死循环，希望同样遇到这样的问题的同学可以通过我的这次经历规避掉这个问题。
