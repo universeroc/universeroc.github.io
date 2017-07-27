@@ -10,4 +10,4 @@ layout: post
 
 [Github now is in Kubernetes](http://dockone.io/article/2505) [Kubernetes](https://github.com/kubernetes) [Docker](https://www.docker.com/)
 
-
+[今日头条Go建千亿级微服务的实践](https://36kr.com/p/5073181.html)
