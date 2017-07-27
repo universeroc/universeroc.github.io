@@ -1,7 +1,7 @@
 ---
 title: Python-Django
 date: 2017-03-14T16:47:44+08:00
-layout:post
+layout: post
 ---
 
 [Python网页框架资源集合](https://www.douban.com/group/topic/90481279/)
