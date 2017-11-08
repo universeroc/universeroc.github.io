@@ -1,0 +1,88 @@
+---
+title: Qt
+date: 2017-11-08T10:23:53+08:00
+layout: post
+---
+
+即将开展一段新的旅程。重新回到 C++ 感觉一下子好了很多。
+
+新的项目使用了 Qt 做为开发框架，有了解过 Qt GTK wxWidget 等跨平台的 UI 框架，只是并没有深入去学习。本来当年打算入坑 Symbian 开发的，而且 Nokia 也做了 Qt 的支持，奈何 Android 和 iOS 直接一波流，Symbian 应声倒下。机缘巧合也没能跨入移动开发的大潮。也就没能和 Qt 签上线。
+
+Qt 做为 C++ 商业化最好的库，可以说历史悠长而且平台支持广泛。独特的 slot signal 机制让开发轻松了不少。宣传层次的东西就不多讲了，一搜一大篇。既然决定要入坑了，就得先搞搞源代码，编译通过，跑跑例子不是，要不然，纸上得来终觉浅呀。
+
+别说编译的过程还真有点小插曲。
+
+我的环境是 Windows 7 x64，安装有 Visual Studio C++ 2015 和 Visual Studio C++ 2017 以及 mingw
+
+```
+git clone https://github.com/qt/qtbase.git
+```
+
+最好切换一个已经发布的最新的分支，避免 master 分支由于开发代码导致编译或者使用有问题卡住 :P
+
+```
+cd qtbase && git checkout tags/5.9.2 && configure.bat
+```
+
+提示没有安装 angle 可能会导致编译失败，建议使用 -opengl desktop 参数
+
+这里也有人遇到过给出过提示 https://stackoverflow.com/questions/16646521/compiling-qt-5-getting-warning-the-build-will-most-likely-fail
+
+```
+configure.bat -opengl desktop
+```
+
+这次倒是一切 OK，提示使用 mingw32-make 进行编译
+
+```
+mingw32-make
+```
+
+本以为会一切顺利，却遇到编译失败
+
+```
+Makefile.Debug:1164: recipe for target '..\..\lib\Qt5Cored.dll' failed
+```
+
+找到了这个 https://bugreports.qt.io/browse/QTBUG-47663
+
+里面提到 已经 closed 了，但是在 tags/5/9.2 分支里仍旧有这个问题，这个也许是没有将这个 patch 提到到对应分支的原因吧，不纠结这个，直接改为 -release 绕过这个 -developer-build 的坑就好。
+
+```
+SOCKADDR_IN6 Ipv6Address;
+```
+
+经过搜索找到这个
+https://github.com/pocoproject/poco/issues/1603
+
+由于我看到 bin 目录里，该有的基本 dll 都有生成了，就使用 Visual Stuido 的 Qt addon，结果无法顺利配置，提示是使用 mingw 编译的， 一看到这里明显明白人家要的是 Visual C++ 编译的结果。
+
+顺着这个 https://wiki.qt.io/Building_Qt_Desktop_for_Windows_with_MSVC 也做了一个 batch 脚本做前面环境变量的准备工作，修改了对应的 vs 的版本就开心的等待结果了。
+
+奈何还没完，还有问题在后面
+
+这次是 nmake 的问题，根据症状找到了类似案例 https://github.com/Microsoft/vcpkg/issues/129
+
+根据之前遇到问题时解决的经验来看，很有可能是之前 mingw32-make 时有一些遗留信息导致的，但是你去执行 git status 的时候却看不到，应该是在 .gitignore 里给忽略了。怎么搞？ 当然好搞，对于一个 git 方面的熟手来说这都不是事儿。
+
+删掉除 .git 外所有的文件及文件夹
+
+```
+qt-build.bat && cd qtbase && git checkout . && configure.bat -release -opengl desktop && nmake
+```
+
+终于顺利的编译了，控制台的信息不停顿翻滚着，看样子就没问题了。
+
+顺利编译后，使用 Qt addon 顺利加载了 Qt，顺利打开了 example.pro 并且转换成了 .sln
+
+不过在编译运行 example 的时候再次遇到问题:
+
+```
+Application failed to start because platform plugin “windows” is missing
+```
+
+这里给了参考 https://stackoverflow.com/questions/20495620/qt-5-1-1-application-failed-to-start-because-platform-plugin-windows-is-missi
+
+libEGL.dll 那个答案不靠谱；我使用了设置 QT_QPA_PLATFORM_PLUGIN_PATH 环境变量的方案解决了。
+
+之后就是顺利的看看 widgets 的代码和其他项目，慢慢熟悉中。如果你在编译源码的时候也遇到过类似的问题，希望这篇文章能帮你逃出坑。
