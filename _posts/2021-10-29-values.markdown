@@ -17,7 +17,7 @@ date: 2021-10-29T14:37:07+08:00
 
 时刻记住：你认为更重要的事情，就要立刻现在马上去做。而那些不那么重要的事情，不能成为占据你太多时间的主角，仅仅应该是一个过客。
 
-<center><img src="../assets/images/grow-a-little-everyday.jpg"></center>
+<center><img src="/assets/images/grow-a-little-everyday.jpg"></center>
 
 看到这张图让我想起那句话：
 
