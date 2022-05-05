@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Houdini Animation Demo</title>
+  <style type="text/css">
+
+    /* The end colour of the gradient */
+    @property --pixel-gradient-color {
+      syntax: '<color>';
+      initial-value: black;
+      inherits: true;
+    }
+    /* The size of each block in the gradient */
+    @property --pixel-gradient-size {
+      syntax: '<length>';
+      initial-value: 8px;
+      inherits: true;
+    }
+
+    .pixel-gradient {
+      --pixel-gradient-color: #9a9a9a;
+      background-color: #8a8a8a;
+      /* Tell the browser to use our worklet
+         for the background image */
+      background-image: paint(pixel-gradient);
+    }
+
+    body {
+      height: 300px;
+      content: layout;
+    }
+
+    .target-el {
+        height: 100%;
+        width: 100%;
+        display: grid;
+        font-weight: bold;
+        align-items: center;
+        justify-items: center;
+        font-size: 3.5rem;
+      }
+  </style>
+</head>
+<body>
+  <div class="target-el pixel-gradient pixel-gradient-animate">
+    Hello Houdini
+  </div>
+  <script type="text/javascript">
+    CSS.paintWorklet.addModule(`worklet.js`);
+  </script>
+</body>
+</html>
